@@ -1,0 +1,35 @@
+{
+    "version": "1.0.0-*",
+    "packExclude": [
+        "**.xproj",
+        "**.user",
+        "**.vspscc"
+    ],
+    "dependencies": {
+        
+    },
+    "commands": {
+    },
+    "frameworks": {
+        "dnx451": {
+            "frameworkAssemblies": {
+				"System.Diagnostics": "",
+                "System.Collections": "",
+                "System.IO": "",
+                "System.Runtime": "",
+                "System.Threading.Tasks": "",
+                "System.Text.Encoding": ""
+            }
+        },
+        "dnxcore50": {
+            "dependencies": {
+				"System.Diagnostics": "4.0.0-beta-*",
+                "System.IO": "4.0.11-beta-*",
+                "System.Console": "4.0.0-beta-*",
+                "System.Runtime": "4.0.21-beta-*",
+                "System.Threading.Tasks": "4.0.11-beta-*",
+                "System.ComponentModel": "4.0.1-beta-*"
+            }
+        }
+    }
+}

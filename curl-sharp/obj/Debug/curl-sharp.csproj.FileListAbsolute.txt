@@ -1,0 +1,5 @@
+C:\dev\csharp\curl-sharp\curl-sharp\obj\Debug\curl-sharp.csprojResolveAssemblyReference.cache
+C:\dev\csharp\curl-sharp\curl-sharp\bin\Debug\curl-sharp.dll
+C:\dev\csharp\curl-sharp\curl-sharp\bin\Debug\curl-sharp.pdb
+C:\dev\csharp\curl-sharp\curl-sharp\obj\Debug\curl-sharp.dll
+C:\dev\csharp\curl-sharp\curl-sharp\obj\Debug\curl-sharp.pdb
