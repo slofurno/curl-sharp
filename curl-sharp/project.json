@@ -13,12 +13,12 @@
     "frameworks": {
         "dnx451": {
             "frameworkAssemblies": {
-				"System.Diagnostics.Process": "",
-                "System.Collections": "",
-                "System.IO": "",
-                "System.Runtime": "",
-                "System.Threading.Tasks": "",
-                "System.Text.Encoding": ""
+				"System.Diagnostics.Process": "4.0.0-beta-*",
+                "System.IO": "4.0.11-beta-*",
+                "System.Console": "4.0.0-beta-*",
+                "System.Runtime": "4.0.21-beta-*",
+                "System.Threading.Tasks": "4.0.11-beta-*",
+                "System.ComponentModel": "4.0.1-beta-*"
             }
         },
         "dnxcore50": {
