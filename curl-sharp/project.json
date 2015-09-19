@@ -13,7 +13,7 @@
     "frameworks": {
         "dnx451": {
             "frameworkAssemblies": {
-				"System.Diagnostics": "",
+				"System.Diagnostics.Process": "",
                 "System.Collections": "",
                 "System.IO": "",
                 "System.Runtime": "",
@@ -23,7 +23,7 @@
         },
         "dnxcore50": {
             "dependencies": {
-				"System.Diagnostics": "4.0.0-beta-*",
+				"System.Diagnostics.Process": "4.0.0-beta-*",
                 "System.IO": "4.0.11-beta-*",
                 "System.Console": "4.0.0-beta-*",
                 "System.Runtime": "4.0.21-beta-*",
