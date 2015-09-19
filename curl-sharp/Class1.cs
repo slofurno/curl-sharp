@@ -14,6 +14,40 @@ namespace curl_sharp
 
       }
 
+      public static async Task<string> Curl(string arguements)
+      {
+        //-i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://hostname/resource
+        var startInfo = new ProcessStartInfo();
+        //startInfo.FileName = "C:/Program Files (x86)/Microsoft SDKs/F#/4.0/Framework/v4.0/fsi.exe";
+        startInfo.FileName = "curl";
+        startInfo.Arguments = arguements;
+        startInfo.RedirectStandardInput = true;
+        startInfo.RedirectStandardOutput = true;
+        startInfo.RedirectStandardError = true;
+        startInfo.UseShellExecute = false;
+
+        var process = Process.Start(startInfo);
+        var reader = process.StandardOutput;
+        var writer = process.StandardInput;
+        var error = process.StandardError;
+
+        string response = "";
+        string output;
+        while ((output = await reader.ReadLineAsync()) != null)
+        {
+          response += output;
+          response += "\r\n";
+        }
+
+        if (!process.WaitForExit(200))
+        {
+          Console.WriteLine("curl process failed to quit in time");
+        }
+
+        return response;
+
+      }
+
 
       public static async Task<string> Get(string url)
       {
@@ -40,6 +74,11 @@ namespace curl_sharp
           response += "\r\n";
         }
 
+        if (!process.WaitForExit(200))
+        {
+          Console.WriteLine("curl process failed to quit in time");
+        }
+
         return response;
 
       }
@@ -51,7 +90,7 @@ namespace curl_sharp
         var startInfo = new ProcessStartInfo();
         //startInfo.FileName = "C:/Program Files (x86)/Microsoft SDKs/F#/4.0/Framework/v4.0/fsi.exe";
         startInfo.FileName = "curl";
-        startInfo.Arguments = "-X POST -H \"Accept: Application/json\" -H \"Content-Type: application/json\" -d \"" + data + "\" " + url;
+        startInfo.Arguments = "-X POST " + url;
         startInfo.RedirectStandardInput = true;
         startInfo.RedirectStandardOutput = true;
         startInfo.RedirectStandardError = true;
@@ -68,6 +107,11 @@ namespace curl_sharp
         {
           response += output;
           response += "\r\n";
+        }
+
+        if (!process.WaitForExit(200))
+        {
+          Console.WriteLine("curl process failed to quit in time");
         }
 
         return response;

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>CurlSharp</id>
+    <version>0.6.1</version>
+    <title>CrockSharp</title>
+    <authors>Steven LoFurno</authors>
+    <owners>Steven LoFurno</owners>
+    <licenseUrl>https://github.com/slofurno/curl-sharp</licenseUrl>
+    <projectUrl>https://github.com/slofurno/curl-sharp</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>tevs</description>
+    <releaseNotes>initial nuget release</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>base32 csharp</tags>
+  </metadata>
+  <files>
+	<file src="bin\Debug\dnxcore50\curl-sharp.dll" target="lib\dnxcore50\curl-sharp.dll" />
+	<file src="bin\Debug\dnxcore50\curl-sharp.xml" target="lib\dnxcore50\curl-sharp.xml" />
+    </files>
+</package>
